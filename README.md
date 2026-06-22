@@ -1,4 +1,4 @@
-# encoder-bb522d
+# encoder-7f832c
 
 A Python encoder utility.
 
